@@ -16,21 +16,6 @@ This project compares **Global Otsu Thresholding** and **Adaptive Sauvola Thresh
 
 **Dataset Used:** Brain Tumor Segmentation Dataset (Kaggle)
 
-Folder structure:
-Brain Tumor Segmentation Dataset/
-│
-├── image/
-│ ├── 0/
-│ ├── 1/
-│ ├── 2/
-│ └── 3/
-│
-└── mask/
-├── 0/
-├── 1/
-├── 2/
-└── 3/
-
 - `image/` → MRI slices
 - `mask/` → Corresponding binary tumor masks
 - Subfolders (0–3) represent tumor categories.
