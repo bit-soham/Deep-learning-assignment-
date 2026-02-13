@@ -50,20 +50,35 @@ Where:
 
 ---
 
-## Observations
+##  Results
 
-- Otsu over-segments high-intensity regions (entire head).
-- Sauvola produces noisy local segmentation.
-- Both methods fail to isolate tumor accurately.
-- Thresholding alone is not sufficient for medical image segmentation.
+### Overall Performance (Mean ± Standard Deviation)
+
+| Method   | Dice (Mean ± Std) | Jaccard (Mean ± Std) |
+|----------|-------------------|----------------------|
+| Otsu     | 0.0609 ± 0.0000   | 0.0314 ± 0.0000      |
+| Sauvola  | 0.0344 ± 0.0000   | 0.0175 ± 0.0000      |
+
+---
+
+###  Analysis
+
+- **Otsu** performed slightly better than Sauvola in both Dice and Jaccard scores.
+- However, both methods achieved very low segmentation accuracy.
+- Global Otsu thresholding tends to segment large high-intensity regions such as the skull and surrounding tissue.
+- Sauvola, while adaptive, produces noisy local regions and fails to consistently isolate tumor boundaries.
+- The near-zero standard deviation indicates consistent behavior across evaluated samples.
 
 ---
 
-## Conclusion
+###  Key Insight
 
-Simple intensity-based thresholding methods are inadequate for accurate tumor segmentation in MRI images. More advanced techniques such as region-based methods or deep learning models are recommended for reliable performance.
+Simple intensity-based thresholding methods are not suitable for accurate brain tumor segmentation due to:
+- Overlapping intensity distributions between tumor and healthy brain tissue.
+- Sensitivity to brightness variations and image contrast.
+- Lack of spatial and contextual understanding.
 
----
+Advanced segmentation approaches such as region-based methods or deep learning architectures (e.g., U-Net) are more appropriate for this task.
 
 ## Future Work
 
