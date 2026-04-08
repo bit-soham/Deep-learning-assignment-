@@ -1,0 +1,525 @@
+11.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.0s 3 0.00s - to python to disable frozen modules.
+11.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.8s 7 0.00s - to python to disable frozen modules.
+11.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+19.5s 9 ✅ Total Unique Stages: 16
+19.5s 10 📌 Stages:
+19.5s 11 t2
+19.5s 12 t3
+19.5s 13 t4
+19.5s 14 t5
+19.5s 15 t6
+19.5s 16 t7
+19.5s 17 t8
+19.5s 18 t9+
+19.5s 19 tB
+19.5s 20 tEB
+19.5s 21 tHB
+19.5s 22 tM
+19.5s 23 tPB2
+19.5s 24 tPNa
+19.5s 25 tPNf
+19.5s 26 tSB
+19.7s 27 [INFO] Installed torch=2.10.0+cu128  (need 2.5.1+cu121 for P100 GPU)
+19.7s 28 [INFO] Installing torch==2.5.1 + torchvision==0.20.1 …
+95.2s 29 [OK] Installed torch=2.5.1+cu121  torchvision=0.20.1+cu121
+95.2s 30 [OK] Install complete — no restart needed for Save & Run.
+95.2s 31 
+101.3s 32 [CHECK] torch=2.5.1+cu121  torchvision=0.20.1+cu121
+102.1s 33 [OK] GPU conv2d test passed on Tesla P100-PCIE-16GB
+102.1s 34 [CHECK] Testing all model families on GPU …
+102.1s 35 [FAIL] MobileNetV1 (custom): No module named 'embryo_models'
+102.6s 36 [OK] MobileNetV2
+105.1s 37 [OK] VGG16-BN
+107.5s 38 [OK] VGG19-BN
+107.5s 39 /usr/local/lib/python3.12/dist-packages/torchvision/models/inception.py:43: FutureWarning: The default weight initialization of inception_v3 will be changed in future releases of torchvision. If you wish to keep the old behavior (which leads to long initialization times due to scipy/scipy#11299), please set init_weights=True.
+107.5s 40 warnings.warn(
+107.5s 41 
+107.5s 42 /usr/local/lib/python3.12/dist-packages/torchvision/models/inception.py:43: FutureWarning: The default weight initialization of inception_v3 will be changed in future releases of torchvision. If you wish to keep the old behavior (which leads to long initialization times due to scipy/scipy#11299), please set init_weights=True.
+107.5s 43 warnings.warn(
+107.9s 44 [OK] InceptionV3
+107.9s 45 
+107.9s 46 ==================================================
+107.9s 47 Environment summary
+107.9s 48 ==================================================
+107.9s 49 torch       : 2.5.1+cu121
+107.9s 50 torchvision : 0.20.1+cu121
+107.9s 51 CUDA        : 12.1
+107.9s 52 GPU         : Tesla P100-PCIE-16GB
+107.9s 53 VRAM        : 17.1 GB
+107.9s 54 ==================================================
+107.9s 55 
+107.9s 56 [READY] Safe to proceed.
+107.9s 57 
+108.0s 58 Checking: /kaggle/input/datasets/abhishekbuddiga06/embryo-dataset/embryo_dataset_annotations/embryo_dataset_annotations/AA83-7_phases.csv
+108.0s 59 
+108.0s 60 'tPB2,5,24\ntPNa,25,88\ntPNf,89,97\nt2,98,171\nt3,172,177\nt4,178,191\nt5,192,241\nt6,242,256\nt7,257,276\nt8,277,286\n'
+276.7s 61 [INFO] Built 297,428 samples across 297428 videos.
+276.7s 62 Skipped 44935 frame(s) — outside annotated range.
+276.7s 63 [INFO] Split → train: 208,529 (492 videos) | val: 45,394 (106) | test: 43,505 (106)
+276.7s 64 
+276.7s 65 [INFO] Train class distribution:
+276.7s 66 t2: 20,258
+276.7s 67 t3:  3,762
+276.7s 68 t4: 20,149
+276.7s 69 t5:  5,830
+276.7s 70 t6:  5,624
+276.7s 71 t7:  7,835
+276.7s 72 t8: 22,947
+276.7s 73 t9+: 36,051
+276.7s 74 tB:  7,469
+276.7s 75 tEB: 13,861
+276.7s 76 tHB:     87
+276.7s 77 tM: 12,267
+276.7s 78 tPB2:  5,909
+276.7s 79 tPNa: 29,878
+276.7s 80 tPNf:  4,721
+276.7s 81 tSB: 11,881
+277.2s 82 
+277.2s 83 [INFO] DataLoaders ready — train: 1630 batches | val: 355 | test: 340
+277.2s 84 
+279.6s 85 Batch shape : torch.Size([128, 3, 224, 224])
+279.6s 86 Label tensor: tensor([12, 13,  4,  0,  1,  6, 13,  4, 14, 13,  5,  9, 11,  2, 15,  0,  1,  0,
+279.6s 87 7, 12, 14,  0,  1, 15, 13,  7,  2, 14,  7, 10,  5,  0, 13, 10,  9,  4,
+279.6s 88 15, 11,  7,  4,  3, 13, 12,  2, 14,  0,  3, 13, 13,  4,  0, 10,  6,  7,
+279.6s 89 9,  5, 12, 14,  5,  2, 13,  4,  6,  2,  3,  1,  6,  3, 11, 14,  4, 12,
+279.6s 90 15,  4, 12,  5, 13, 12,  9, 14,  8,  3, 11,  7,  0, 10,  0,  2,  3,  9,
+279.6s 91 10,  8,  3,  2,  9,  2,  0,  7, 13, 12,  9,  6,  2,  3, 10,  6,  6,  9,
+279.6s 92 8,  3, 13,  5,  9, 10,  4,  0, 15,  8,  7, 10,  9,  8, 14, 14,  1, 15,
+279.6s 93 15,  9])
+279.6s 94 Stage names : ['tPB2', 'tPNa', 't6', 't2', 't3', 't8', 'tPNa', 't6']
+279.6s 95 === DATASET ROOT ===
+279.6s 96 Exists: True | Absolute: /kaggle/input/datasets/abhishekbuddiga06/embryo-dataset/embryo_dataset/embryo_dataset
+279.6s 97 Contents (704 items): ['FM1017-5', 'HC459-6', 'GJ191-1', 'LMMG218-1-10', 'RD1142-2']
+279.6s 98 
+279.6s 99 First video 'FM1017-5' — 454 files
+279.6s 100 Sample filenames: ['D2016.11.25_S1782_I132_WELL5_RUN18.jpeg', 'D2016.11.25_S1782_I132_WELL5_RUN62.jpeg', 'D2016.11.25_S1782_I132_WELL5_RUN378.jpeg', 'D2016.11.25_S1782_I132_WELL5_RUN58.jpeg', 'D2016.11.25_S1782_I132_WELL5_RUN263.jpeg']
+279.6s 101 
+279.6s 102 === ANNOTATIONS ROOT ===
+279.6s 103 Exists: True | Absolute: /kaggle/input/datasets/abhishekbuddiga06/embryo-dataset/embryo_dataset_annotations/embryo_dataset_annotations
+279.6s 104 Contents (704 items): ['BC750-7_phases.csv', 'SK308-7_phases.csv', 'QC697-4_phases.csv', 'DI358-3_phases.csv', 'DV210-4_phases.csv']
+279.6s 105 
+279.6s 106 === CWD ===
+279.6s 107 /kaggle/working
+283.0s 108 [INFO] Using device: cuda
+292.8s 109 [INFO] Built 297,428 samples across 297428 videos.
+292.8s 110 Skipped 44935 frame(s) — outside annotated range.
+292.8s 111 [INFO] Split → train: 208,529 (492 videos) | val: 45,394 (106) | test: 43,505 (106)
+292.8s 112 
+292.8s 113 [INFO] Train class distribution:
+292.8s 114 t2: 20,258
+292.8s 115 t3:  3,762
+292.8s 116 t4: 20,149
+292.8s 117 t5:  5,830
+292.8s 118 t6:  5,624
+292.8s 119 t7:  7,835
+292.8s 120 t8: 22,947
+292.8s 121 t9+: 36,051
+292.8s 122 tB:  7,469
+292.8s 123 tEB: 13,861
+292.8s 124 tHB:     87
+292.8s 125 tM: 12,267
+292.8s 126 tPB2:  5,909
+292.8s 127 tPNa: 29,878
+292.8s 128 tPNf:  4,721
+292.8s 129 tSB: 11,881
+293.4s 130 
+293.4s 131 [INFO] DataLoaders ready — train: 1630 batches | val: 355 | test: 340
+293.4s 132 
+301.8s 133 [INFO] Built 297,428 samples across 297428 videos.
+301.8s 134 Skipped 44935 frame(s) — outside annotated range.
+301.8s 135 [INFO] Split → train: 208,529 (492 videos) | val: 45,394 (106) | test: 43,505 (106)
+301.8s 136 
+301.8s 137 [INFO] Train class distribution:
+301.8s 138 t2: 20,258
+301.8s 139 t3:  3,762
+301.8s 140 t4: 20,149
+301.8s 141 t5:  5,830
+301.8s 142 t6:  5,624
+301.8s 143 t7:  7,835
+301.8s 144 t8: 22,947
+301.8s 145 t9+: 36,051
+301.8s 146 tB:  7,469
+301.8s 147 tEB: 13,861
+301.8s 148 tHB:     87
+301.8s 149 tM: 12,267
+301.8s 150 tPB2:  5,909
+301.8s 151 tPNa: 29,878
+301.8s 152 tPNf:  4,721
+301.8s 153 tSB: 11,881
+302.5s 154 
+302.5s 155 [INFO] DataLoaders ready — train: 3259 batches | val: 710 | test: 680
+302.5s 156 
+302.5s 157 
+302.5s 158 ============================================================
+302.5s 159 Training: MOBILENET_V1
+302.5s 160 ============================================================
+302.5s 161 [INFO] MobileNetV1 has no torchvision pretrained weights — training from scratch.
+302.5s 162 Parameters — Total: 3,223,376  |  Trainable: 3,223,376
+302.5s 163 
+1133.9s 164 ↳ Epoch 01/5 | train loss 0.4000  acc 0.1471 | val loss 2.4909  acc 0.0537 | 831s
+1133.9s 165 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v1_best.pt  (val_acc=0.0537)
+1133.9s 166 
+1861.7s 167 ↳ Epoch 02/5 | train loss 0.3195  acc 0.2610 | val loss 2.4007  acc 0.0959 | 728s
+1861.7s 168 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v1_best.pt  (val_acc=0.0959)
+1861.7s 169 Periodic checkpoint → /kaggle/working/checkpoints/mobilenet_v1_epoch002.pt
+1861.7s 170 
+2578.2s 171 ↳ Epoch 03/5 | train loss 0.2925  acc 0.3457 | val loss 2.4257  acc 0.1507 | 716s
+2578.2s 172 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v1_best.pt  (val_acc=0.1507)
+2578.2s 173 
+3294.6s 174 ↳ Epoch 04/5 | train loss 0.2770  acc 0.3999 | val loss 2.4219  acc 0.1601 | 716s
+3294.6s 175 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v1_best.pt  (val_acc=0.1601)
+3294.6s 176 Periodic checkpoint → /kaggle/working/checkpoints/mobilenet_v1_epoch004.pt
+3294.6s 177 
+4002.5s 178 ↳ Epoch 05/5 | train loss 0.2731  acc 0.4243 | val loss 2.3787  acc 0.1808 | 708s
+4002.5s 179 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v1_best.pt  (val_acc=0.1808)
+4002.5s 180 
+4002.5s 181 
+4002.5s 182 ────────────────────────────────────────────────────────────
+4002.5s 183 Running TEST evaluation with best weights …
+4147.2s 184 
+4147.2s 185 [TEST] loss=2.3043  acc=0.2044  MAOE=1.873
+4147.2s 186 
+4147.2s 187 precision    recall  f1-score   support
+4147.2s 188 
+4147.2s 189 t2       0.81      0.23      0.36      4428
+4147.2s 190 t3       0.08      0.70      0.14       609
+4147.2s 191 t4       0.74      0.01      0.02      4627
+4147.2s 192 t5       0.11      0.38      0.18       941
+4147.2s 193 t6       0.12      0.25      0.16      1220
+4147.2s 194 t7       0.08      0.31      0.13      1035
+4147.2s 195 t8       0.62      0.07      0.13      5100
+4147.2s 196 t9+       0.81      0.14      0.24      7062
+4147.2s 197 tB       0.44      0.38      0.41      1761
+4147.2s 198 tEB       0.76      0.17      0.28      2724
+4147.2s 199 tHB       0.00      0.30      0.00        10
+4147.2s 200 tM       0.47      0.50      0.48      2372
+4147.2s 201 tPB2       0.16      0.64      0.26      1396
+4147.2s 202 tPNa       0.82      0.03      0.06      6634
+4147.2s 203 tPNf       0.22      0.71      0.34      1061
+4147.2s 204 tSB       0.51      0.35      0.42      2525
+4147.2s 205 
+4147.2s 206 accuracy                           0.20     43505
+4147.2s 207 macro avg       0.42      0.32      0.22     43505
+4147.2s 208 weighted avg       0.63      0.20      0.22     43505
+4147.2s 209 
+4147.2s 210 
+4147.2s 211 ============================================================
+4147.2s 212 Training: MOBILENET_V2
+4147.2s 213 ============================================================
+4147.3s 214 Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v2-b0353104.pth
+4147.3s 215 
+4147.3s 216 Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v2-b0353104.pth
+4147.3s 217 0%|          | 0.00/13.6M [00:00<?, ?B/s]
+4147.4s 218 0%|          | 0.00/13.6M [00:00<?, ?B/s] 44%|████▍     | 6.00M/13.6M [00:00<00:00, 62.8MB/s]
+4147.5s 219 44%|████▍     | 6.00M/13.6M [00:00<00:00, 62.8MB/s] 89%|████████▊ | 12.0M/13.6M [00:00<00:00, 60.9MB/s]
+4147.5s 220 89%|████████▊ | 12.0M/13.6M [00:00<00:00, 60.9MB/s]100%|██████████| 13.6M/13.6M [00:00<00:00, 66.5MB/s]
+4147.6s 221 100%|██████████| 13.6M/13.6M [00:00<00:00, 66.5MB/s]
+4147.6s 222 
+4147.6s 223 
+4147.7s 224 Parameters — Total: 2,244,368  |  Trainable: 2,244,368
+4147.7s 225 
+4864.3s 226 ↳ Epoch 01/5 | train loss 0.2602  acc 0.5159 | val loss 2.1476  acc 0.4335 | 716s
+4864.3s 227 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v2_best.pt  (val_acc=0.4335)
+4864.3s 228 
+5584.1s 229 ↳ Epoch 02/5 | train loss 0.2281  acc 0.6751 | val loss 2.2195  acc 0.4985 | 720s
+5584.1s 230 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v2_best.pt  (val_acc=0.4985)
+5584.1s 231 Periodic checkpoint → /kaggle/working/checkpoints/mobilenet_v2_epoch002.pt
+5584.1s 232 
+6301.3s 233 ↳ Epoch 03/5 | train loss 0.2164  acc 0.7366 | val loss 2.2936  acc 0.5037 | 717s
+6301.3s 234 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v2_best.pt  (val_acc=0.5037)
+6301.3s 235 
+7020.1s 236 ↳ Epoch 04/5 | train loss 0.2103  acc 0.7732 | val loss 2.2509  acc 0.5410 | 719s
+7020.1s 237 Best checkpoint → /kaggle/working/checkpoints/mobilenet_v2_best.pt  (val_acc=0.5410)
+7020.1s 238 Periodic checkpoint → /kaggle/working/checkpoints/mobilenet_v2_epoch004.pt
+7020.1s 239 
+7737.1s 240 ↳ Epoch 05/5 | train loss 0.2063  acc 0.7960 | val loss 2.2457  acc 0.5280 | 717s
+7737.1s 241 
+7737.1s 242 
+7737.1s 243 ────────────────────────────────────────────────────────────
+7737.1s 244 Running TEST evaluation with best weights …
+7830.1s 245 
+7830.1s 246 [TEST] loss=2.1409  acc=0.5810  MAOE=0.737
+7830.1s 247 
+7830.1s 248 precision    recall  f1-score   support
+7830.1s 249 
+7830.1s 250 t2       0.93      0.78      0.85      4428
+7830.1s 251 t3       0.22      0.56      0.31       609
+7830.1s 252 t4       0.80      0.53      0.64      4627
+7830.1s 253 t5       0.19      0.41      0.26       941
+7830.1s 254 t6       0.25      0.32      0.28      1220
+7830.1s 255 t7       0.15      0.27      0.19      1035
+7830.1s 256 t8       0.62      0.59      0.61      5100
+7830.1s 257 t9+       0.87      0.44      0.58      7062
+7830.1s 258 tB       0.37      0.33      0.35      1761
+7830.1s 259 tEB       0.72      0.40      0.51      2724
+7830.1s 260 tHB       0.00      0.30      0.00        10
+7830.1s 261 tM       0.50      0.69      0.58      2372
+7830.1s 262 tPB2       0.51      0.96      0.66      1396
+7830.1s 263 tPNa       0.98      0.75      0.85      6634
+7830.1s 264 tPNf       0.56      0.80      0.66      1061
+7830.1s 265 tSB       0.64      0.54      0.58      2525
+7830.1s 266 
+7830.1s 267 accuracy                           0.58     43505
+7830.1s 268 macro avg       0.52      0.54      0.50     43505
+7830.1s 269 weighted avg       0.72      0.58      0.62     43505
+7830.1s 270 
+7830.1s 271 
+7830.1s 272 ============================================================
+7830.1s 273 Training: INCEPTION
+7830.1s 274 ============================================================
+7830.3s 275 Downloading: "https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth" to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth
+7830.3s 276 
+7830.3s 277 Downloading: "https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth" to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth
+7830.3s 278 0%|          | 0.00/104M [00:00<?, ?B/s]
+7830.4s 279 0%|          | 0.00/104M [00:00<?, ?B/s] 15%|█▌        | 15.6M/104M [00:00<00:00, 163MB/s]
+7830.5s 280 15%|█▌        | 15.6M/104M [00:00<00:00, 163MB/s] 37%|███▋      | 38.8M/104M [00:00<00:00, 209MB/s]
+7830.6s 281 37%|███▋      | 38.8M/104M [00:00<00:00, 209MB/s] 57%|█████▋    | 58.8M/104M [00:00<00:00, 205MB/s]
+7830.7s 282 57%|█████▋    | 58.8M/104M [00:00<00:00, 205MB/s] 78%|███████▊  | 81.4M/104M [00:00<00:00, 217MB/s]
+7830.8s 283 78%|███████▊  | 81.4M/104M [00:00<00:00, 217MB/s]100%|██████████| 104M/104M [00:00<00:00, 216MB/s]
+7830.8s 284 100%|██████████| 104M/104M [00:00<00:00, 216MB/s]
+7830.8s 285 
+7830.8s 286 
+7831.1s 287 Parameters — Total: 24,388,352  |  Trainable: 24,388,352
+7831.1s 288 
+9617.4s 289 ↳ Epoch 01/5 | train loss 0.3526  acc 0.6014 | val loss 2.2052  acc 0.5387 | 1786s
+9617.8s 290 Best checkpoint → /kaggle/working/checkpoints/inception_best.pt  (val_acc=0.5387)
+9617.8s 291 
+11405.6s 292 ↳ Epoch 02/5 | train loss 0.3007  acc 0.7760 | val loss 2.1825  acc 0.5856 | 1788s
+11406.2s 293 Best checkpoint → /kaggle/working/checkpoints/inception_best.pt  (val_acc=0.5856)
+11406.7s 294 Periodic checkpoint → /kaggle/working/checkpoints/inception_epoch002.pt
+11406.7s 295 
+13193.4s 296 ↳ Epoch 03/5 | train loss 0.2820  acc 0.8419 | val loss 2.2009  acc 0.5825 | 1787s
+13193.4s 297 
+14979.2s 298 ↳ Epoch 04/5 | train loss 0.2741  acc 0.8824 | val loss 2.2968  acc 0.6010 | 1786s
+14979.9s 299 Best checkpoint → /kaggle/working/checkpoints/inception_best.pt  (val_acc=0.6010)
+14980.3s 300 Periodic checkpoint → /kaggle/working/checkpoints/inception_epoch004.pt
+14980.3s 301 
+16765.8s 302 ↳ Epoch 05/5 | train loss 0.2618  acc 0.9078 | val loss 2.2445  acc 0.6096 | 1785s
+16766.4s 303 Best checkpoint → /kaggle/working/checkpoints/inception_best.pt  (val_acc=0.6096)
+16766.4s 304 
+16766.4s 305 
+16766.4s 306 ────────────────────────────────────────────────────────────
+16766.4s 307 Running TEST evaluation with best weights …
+16870.0s 308 
+16870.0s 309 [TEST] loss=2.1219  acc=0.6644  MAOE=0.556
+16870.0s 310 
+16870.0s 311 precision    recall  f1-score   support
+16870.0s 312 
+16870.0s 313 t2       0.92      0.89      0.90      4428
+16870.0s 314 t3       0.34      0.44      0.38       609
+16870.0s 315 t4       0.84      0.72      0.77      4627
+16870.0s 316 t5       0.31      0.44      0.36       941
+16870.0s 317 t6       0.34      0.34      0.34      1220
+16870.0s 318 t7       0.21      0.32      0.25      1035
+16870.0s 319 t8       0.61      0.65      0.63      5100
+16870.0s 320 t9+       0.81      0.58      0.68      7062
+16870.0s 321 tB       0.43      0.41      0.42      1761
+16870.0s 322 tEB       0.66      0.55      0.60      2724
+16870.0s 323 tHB       0.00      0.10      0.00        10
+16870.0s 324 tM       0.58      0.62      0.60      2372
+16870.0s 325 tPB2       0.62      0.90      0.74      1396
+16870.0s 326 tPNa       0.97      0.82      0.89      6634
+16870.0s 327 tPNf       0.57      0.83      0.67      1061
+16870.0s 328 tSB       0.68      0.63      0.66      2525
+16870.0s 329 
+16870.0s 330 accuracy                           0.66     43505
+16870.0s 331 macro avg       0.56      0.58      0.56     43505
+16870.0s 332 weighted avg       0.72      0.66      0.69     43505
+16870.0s 333 
+16870.0s 334 
+16870.0s 335 ============================================================
+16870.0s 336 Training: VGG16
+16870.0s 337 ============================================================
+16871.1s 338 Downloading: "https://download.pytorch.org/models/vgg16_bn-6c64b313.pth" to /root/.cache/torch/hub/checkpoints/vgg16_bn-6c64b313.pth
+16871.1s 339 
+16871.1s 340 Downloading: "https://download.pytorch.org/models/vgg16_bn-6c64b313.pth" to /root/.cache/torch/hub/checkpoints/vgg16_bn-6c64b313.pth
+16871.3s 341 0%|          | 0.00/528M [00:00<?, ?B/s]
+16871.4s 342 0%|          | 0.00/528M [00:00<?, ?B/s]  3%|▎         | 18.2M/528M [00:00<00:02, 191MB/s]
+16871.5s 343 3%|▎         | 18.2M/528M [00:00<00:02, 191MB/s]  8%|▊         | 40.5M/528M [00:00<00:02, 216MB/s]
+16871.6s 344 8%|▊         | 40.5M/528M [00:00<00:02, 216MB/s] 12%|█▏        | 64.5M/528M [00:00<00:02, 232MB/s]
+16871.7s 345 12%|█▏        | 64.5M/528M [00:00<00:02, 232MB/s] 17%|█▋        | 88.2M/528M [00:00<00:01, 238MB/s]
+16871.8s 346 17%|█▋        | 88.2M/528M [00:00<00:01, 238MB/s] 21%|██▏       | 112M/528M [00:00<00:01, 244MB/s]
+16871.9s 347 21%|██▏       | 112M/528M [00:00<00:01, 244MB/s]  26%|██▌       | 137M/528M [00:00<00:01, 247MB/s]
+16872.0s 348 26%|██▌       | 137M/528M [00:00<00:01, 247MB/s] 30%|███       | 160M/528M [00:00<00:01, 244MB/s]
+16872.1s 349 30%|███       | 160M/528M [00:00<00:01, 244MB/s] 35%|███▍      | 184M/528M [00:00<00:01, 246MB/s]
+16872.2s 350 35%|███▍      | 184M/528M [00:00<00:01, 246MB/s] 39%|███▉      | 208M/528M [00:00<00:01, 239MB/s]
+16872.3s 351 39%|███▉      | 208M/528M [00:00<00:01, 239MB/s] 44%|████▎     | 230M/528M [00:01<00:01, 223MB/s]
+16872.4s 352 44%|████▎     | 230M/528M [00:01<00:01, 223MB/s] 48%|████▊     | 252M/528M [00:01<00:01, 218MB/s]
+16872.5s 353 48%|████▊     | 252M/528M [00:01<00:01, 218MB/s] 52%|█████▏    | 273M/528M [00:01<00:01, 213MB/s]
+16872.6s 354 52%|█████▏    | 273M/528M [00:01<00:01, 213MB/s] 56%|█████▌    | 294M/528M [00:01<00:01, 208MB/s]
+16872.7s 355 56%|█████▌    | 294M/528M [00:01<00:01, 208MB/s] 59%|█████▉    | 314M/528M [00:01<00:01, 207MB/s]
+16874.0s 356 59%|█████▉    | 314M/528M [00:01<00:01, 207MB/s] 63%|██████▎   | 333M/528M [00:02<00:04, 48.7MB/s]
+16874.1s 357 63%|██████▎   | 333M/528M [00:02<00:04, 48.7MB/s] 66%|██████▋   | 351M/528M [00:02<00:03, 60.5MB/s]
+16875.3s 358 66%|██████▋   | 351M/528M [00:02<00:03, 60.5MB/s] 69%|██████▉   | 366M/528M [00:04<00:05, 32.1MB/s]
+16875.4s 359 69%|██████▉   | 366M/528M [00:04<00:05, 32.1MB/s] 74%|███████▍  | 390M/528M [00:04<00:03, 46.3MB/s]
+16875.5s 360 74%|███████▍  | 390M/528M [00:04<00:03, 46.3MB/s] 78%|███████▊  | 413M/528M [00:04<00:01, 63.9MB/s]
+16875.6s 361 78%|███████▊  | 413M/528M [00:04<00:01, 63.9MB/s] 83%|████████▎ | 438M/528M [00:04<00:01, 84.7MB/s]
+16875.7s 362 83%|████████▎ | 438M/528M [00:04<00:01, 84.7MB/s] 87%|████████▋ | 462M/528M [00:04<00:00, 108MB/s]
+16875.8s 363 87%|████████▋ | 462M/528M [00:04<00:00, 108MB/s]  92%|█████████▏| 486M/528M [00:04<00:00, 131MB/s]
+16875.9s 364 92%|█████████▏| 486M/528M [00:04<00:00, 131MB/s] 97%|█████████▋| 510M/528M [00:04<00:00, 154MB/s]
+16875.9s 365 97%|█████████▋| 510M/528M [00:04<00:00, 154MB/s]100%|██████████| 528M/528M [00:04<00:00, 118MB/s]
+16876.0s 366 100%|██████████| 528M/528M [00:04<00:00, 118MB/s]
+16876.0s 367 
+16876.0s 368 
+16876.6s 369 Parameters — Total: 134,334,544  |  Trainable: 134,334,544
+16876.6s 370 
+18679.6s 371 ↳ Epoch 01/5 | train loss 0.2828  acc 0.5709 | val loss 2.3783  acc 0.4738 | 1802s
+18682.0s 372 Best checkpoint → /kaggle/working/checkpoints/vgg16_best.pt  (val_acc=0.4738)
+18682.0s 373 
+20488.0s 374 ↳ Epoch 02/5 | train loss 0.2414  acc 0.7411 | val loss 2.2272  acc 0.5874 | 1806s
+20492.2s 375 Best checkpoint → /kaggle/working/checkpoints/vgg16_best.pt  (val_acc=0.5874)
+20494.8s 376 Periodic checkpoint → /kaggle/working/checkpoints/vgg16_epoch002.pt
+20494.8s 377 
+22296.4s 378 ↳ Epoch 03/5 | train loss 0.2261  acc 0.8113 | val loss 2.3550  acc 0.5885 | 1802s
+22300.3s 379 Best checkpoint → /kaggle/working/checkpoints/vgg16_best.pt  (val_acc=0.5885)
+22300.3s 380 
+24101.7s 381 ↳ Epoch 04/5 | train loss 0.2224  acc 0.8573 | val loss 2.2638  acc 0.6128 | 1801s
+24105.9s 382 Best checkpoint → /kaggle/working/checkpoints/vgg16_best.pt  (val_acc=0.6128)
+24108.4s 383 Periodic checkpoint → /kaggle/working/checkpoints/vgg16_epoch004.pt
+24108.4s 384 
+25918.0s 385 ↳ Epoch 05/5 | train loss 0.2152  acc 0.8844 | val loss 2.2823  acc 0.6289 | 1810s
+25921.8s 386 Best checkpoint → /kaggle/working/checkpoints/vgg16_best.pt  (val_acc=0.6289)
+25921.8s 387 
+25921.8s 388 
+25921.8s 389 ────────────────────────────────────────────────────────────
+25921.8s 390 Running TEST evaluation with best weights …
+26042.7s 391 
+26042.7s 392 [TEST] loss=2.1774  acc=0.6754  MAOE=0.535
+26042.7s 393 
+26042.7s 394 precision    recall  f1-score   support
+26042.7s 395 
+26042.7s 396 t2       0.93      0.86      0.89      4428
+26042.7s 397 t3       0.31      0.49      0.38       609
+26042.7s 398 t4       0.87      0.65      0.74      4627
+26042.7s 399 t5       0.29      0.41      0.34       941
+26042.7s 400 t6       0.38      0.50      0.43      1220
+26042.7s 401 t7       0.21      0.36      0.27      1035
+26042.7s 402 t8       0.68      0.62      0.65      5100
+26042.7s 403 t9+       0.83      0.63      0.71      7062
+26042.7s 404 tB       0.40      0.40      0.40      1761
+26042.7s 405 tEB       0.75      0.59      0.66      2724
+26042.7s 406 tHB       0.00      0.10      0.00        10
+26042.7s 407 tM       0.52      0.68      0.59      2372
+26042.7s 408 tPB2       0.65      0.91      0.76      1396
+26042.7s 409 tPNa       0.98      0.84      0.91      6634
+26042.7s 410 tPNf       0.60      0.85      0.70      1061
+26042.7s 411 tSB       0.68      0.65      0.67      2525
+26042.7s 412 
+26042.7s 413 accuracy                           0.68     43505
+26042.7s 414 macro avg       0.57      0.60      0.57     43505
+26042.7s 415 weighted avg       0.74      0.68      0.70     43505
+26042.7s 416 
+26042.7s 417 
+26042.7s 418 ============================================================
+26042.7s 419 Training: VGG19
+26042.7s 420 ============================================================
+26043.9s 421 Downloading: "https://download.pytorch.org/models/vgg19_bn-c79401a0.pth" to /root/.cache/torch/hub/checkpoints/vgg19_bn-c79401a0.pth
+26043.9s 422 
+26043.9s 423 Downloading: "https://download.pytorch.org/models/vgg19_bn-c79401a0.pth" to /root/.cache/torch/hub/checkpoints/vgg19_bn-c79401a0.pth
+26043.9s 424 0%|          | 0.00/548M [00:00<?, ?B/s]
+26044.0s 425 0%|          | 0.00/548M [00:00<?, ?B/s]  1%|▏         | 7.88M/548M [00:00<00:06, 82.0MB/s]
+26044.1s 426 1%|▏         | 7.88M/548M [00:00<00:06, 82.0MB/s]  3%|▎         | 15.8M/548M [00:00<00:07, 77.2MB/s]
+26044.2s 427 3%|▎         | 15.8M/548M [00:00<00:07, 77.2MB/s]  7%|▋         | 35.8M/548M [00:00<00:03, 135MB/s]
+26044.3s 428 7%|▋         | 35.8M/548M [00:00<00:03, 135MB/s]  10%|█         | 55.6M/548M [00:00<00:03, 163MB/s]
+26044.4s 429 10%|█         | 55.6M/548M [00:00<00:03, 163MB/s] 14%|█▍        | 75.6M/548M [00:00<00:02, 179MB/s]
+26044.5s 430 14%|█▍        | 75.6M/548M [00:00<00:02, 179MB/s] 17%|█▋        | 95.6M/548M [00:00<00:02, 189MB/s]
+26044.6s 431 17%|█▋        | 95.6M/548M [00:00<00:02, 189MB/s] 21%|██        | 116M/548M [00:00<00:02, 195MB/s]
+26044.7s 432 21%|██        | 116M/548M [00:00<00:02, 195MB/s]  25%|██▍       | 135M/548M [00:00<00:02, 199MB/s]
+26044.8s 433 25%|██▍       | 135M/548M [00:00<00:02, 199MB/s] 28%|██▊       | 155M/548M [00:00<00:02, 201MB/s]
+26044.9s 434 28%|██▊       | 155M/548M [00:00<00:02, 201MB/s] 32%|███▏      | 175M/548M [00:01<00:01, 203MB/s]
+26045.0s 435 32%|███▏      | 175M/548M [00:01<00:01, 203MB/s] 35%|███▌      | 194M/548M [00:01<00:01, 202MB/s]
+26045.1s 436 35%|███▌      | 194M/548M [00:01<00:01, 202MB/s] 39%|███▉      | 214M/548M [00:01<00:01, 204MB/s]
+26045.2s 437 39%|███▉      | 214M/548M [00:01<00:01, 204MB/s] 43%|████▎     | 234M/548M [00:01<00:01, 205MB/s]
+26045.3s 438 43%|████▎     | 234M/548M [00:01<00:01, 205MB/s] 46%|████▋     | 254M/548M [00:01<00:01, 203MB/s]
+26045.4s 439 46%|████▋     | 254M/548M [00:01<00:01, 203MB/s] 50%|████▉     | 273M/548M [00:01<00:01, 203MB/s]
+26045.5s 440 50%|████▉     | 273M/548M [00:01<00:01, 203MB/s] 53%|█████▎    | 293M/548M [00:01<00:01, 203MB/s]
+26045.6s 441 53%|█████▎    | 293M/548M [00:01<00:01, 203MB/s] 57%|█████▋    | 312M/548M [00:01<00:01, 204MB/s]
+26045.7s 442 57%|█████▋    | 312M/548M [00:01<00:01, 204MB/s] 61%|██████    | 333M/548M [00:01<00:01, 206MB/s]
+26045.8s 443 61%|██████    | 333M/548M [00:01<00:01, 206MB/s] 64%|██████▍   | 353M/548M [00:01<00:00, 208MB/s]
+26045.9s 444 64%|██████▍   | 353M/548M [00:01<00:00, 208MB/s] 68%|██████▊   | 373M/548M [00:02<00:00, 210MB/s]
+26046.0s 445 68%|██████▊   | 373M/548M [00:02<00:00, 210MB/s] 72%|███████▏  | 394M/548M [00:02<00:00, 208MB/s]
+26046.2s 446 72%|███████▏  | 394M/548M [00:02<00:00, 208MB/s] 75%|███████▌  | 413M/548M [00:02<00:00, 199MB/s]
+26046.3s 447 75%|███████▌  | 413M/548M [00:02<00:00, 199MB/s] 79%|███████▉  | 432M/548M [00:02<00:00, 196MB/s]
+26046.4s 448 79%|███████▉  | 432M/548M [00:02<00:00, 196MB/s] 82%|████████▏ | 451M/548M [00:02<00:00, 193MB/s]
+26046.5s 449 82%|████████▏ | 451M/548M [00:02<00:00, 193MB/s] 86%|████████▌ | 470M/548M [00:02<00:00, 191MB/s]
+26046.6s 450 86%|████████▌ | 470M/548M [00:02<00:00, 191MB/s] 89%|████████▉ | 488M/548M [00:02<00:00, 190MB/s]
+26046.7s 451 89%|████████▉ | 488M/548M [00:02<00:00, 190MB/s] 92%|█████████▏| 506M/548M [00:02<00:00, 189MB/s]
+26046.8s 452 92%|█████████▏| 506M/548M [00:02<00:00, 189MB/s] 96%|█████████▌| 524M/548M [00:02<00:00, 188MB/s]
+26046.9s 453 96%|█████████▌| 524M/548M [00:02<00:00, 188MB/s] 99%|█████████▉| 542M/548M [00:02<00:00, 187MB/s]
+26046.9s 454 99%|█████████▉| 542M/548M [00:02<00:00, 187MB/s]100%|██████████| 548M/548M [00:02<00:00, 192MB/s]
+26047.3s 455 100%|██████████| 548M/548M [00:02<00:00, 192MB/s]
+26047.3s 456 
+26047.3s 457 
+26047.8s 458 Parameters — Total: 139,646,800  |  Trainable: 139,646,800
+26047.8s 459 
+28123.9s 460 ↳ Epoch 01/5 | train loss 0.2811  acc 0.5631 | val loss 2.2162  acc 0.5228 | 2076s
+28126.4s 461 Best checkpoint → /kaggle/working/checkpoints/vgg19_best.pt  (val_acc=0.5228)
+28126.4s 462 
+30202.7s 463 ↳ Epoch 02/5 | train loss 0.2470  acc 0.7314 | val loss 2.3501  acc 0.5761 | 2076s
+30206.8s 464 Best checkpoint → /kaggle/working/checkpoints/vgg19_best.pt  (val_acc=0.5761)
+30209.7s 465 Periodic checkpoint → /kaggle/working/checkpoints/vgg19_epoch002.pt
+30209.7s 466 
+32285.8s 467 ↳ Epoch 03/5 | train loss 0.2321  acc 0.8031 | val loss 2.2724  acc 0.6018 | 2076s
+32289.9s 468 Best checkpoint → /kaggle/working/checkpoints/vgg19_best.pt  (val_acc=0.6018)
+32289.9s 469 
+34366.5s 470 ↳ Epoch 04/5 | train loss 0.2190  acc 0.8533 | val loss 2.3359  acc 0.6208 | 2077s
+34370.6s 471 Best checkpoint → /kaggle/working/checkpoints/vgg19_best.pt  (val_acc=0.6208)
+34373.3s 472 Periodic checkpoint → /kaggle/working/checkpoints/vgg19_epoch004.pt
+34373.3s 473 
+36450.1s 474 ↳ Epoch 05/5 | train loss 0.2169  acc 0.8810 | val loss 2.2016  acc 0.6235 | 2077s
+36454.0s 475 Best checkpoint → /kaggle/working/checkpoints/vgg19_best.pt  (val_acc=0.6235)
+36454.0s 476 
+36454.0s 477 
+36454.0s 478 ────────────────────────────────────────────────────────────
+36454.0s 479 Running TEST evaluation with best weights …
+36585.1s 480 
+36585.1s 481 [TEST] loss=2.1111  acc=0.6757  MAOE=0.588
+36585.1s 482 
+36585.1s 483 precision    recall  f1-score   support
+36585.1s 484 
+36585.1s 485 t2       0.92      0.86      0.89      4428
+36585.1s 486 t3       0.36      0.57      0.44       609
+36585.1s 487 t4       0.85      0.67      0.75      4627
+36585.1s 488 t5       0.30      0.39      0.34       941
+36585.1s 489 t6       0.38      0.43      0.40      1220
+36585.1s 490 t7       0.24      0.30      0.27      1035
+36585.1s 491 t8       0.69      0.70      0.69      5100
+36585.1s 492 t9+       0.81      0.61      0.70      7062
+36585.1s 493 tB       0.49      0.37      0.42      1761
+36585.1s 494 tEB       0.66      0.57      0.61      2724
+36585.1s 495 tHB       0.00      0.30      0.00        10
+36585.1s 496 tM       0.55      0.67      0.60      2372
+36585.1s 497 tPB2       0.60      0.93      0.73      1396
+36585.1s 498 tPNa       0.97      0.81      0.89      6634
+36585.1s 499 tPNf       0.49      0.81      0.61      1061
+36585.1s 500 tSB       0.69      0.66      0.67      2525
+36585.1s 501 
+36585.1s 502 accuracy                           0.68     43505
+36585.1s 503 macro avg       0.56      0.60      0.56     43505
+36585.1s 504 weighted avg       0.74      0.68      0.70     43505
+36585.1s 505 
+36585.1s 506 
+36585.1s 507 =======================================================
+36585.1s 508 FINAL COMPARISON
+36585.1s 509 =======================================================
+36585.1s 510 Model  Test Acc  Test Loss  MAOE  Best Val Acc
+36585.1s 511 vgg19    0.6757     2.1111 0.588        0.6235
+36585.1s 512 vgg16    0.6754     2.1774 0.535        0.6289
+36585.1s 513 inception    0.6644     2.1219 0.556        0.6096
+36585.1s 514 mobilenet_v2    0.5810     2.1409 0.737        0.5410
+36585.1s 515 mobilenet_v1    0.2044     2.3043 1.873        0.1808
+36585.1s 516 
+36585.1s 517 Saved → /kaggle/working/checkpoints/model_comparison.csv
+36591.9s 518 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+36591.9s 519 cells[i][c] = re.sub('\\\\\|', '|', cell)
+36592.3s 520 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+36592.3s 521 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+36593.7s 522 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+36594.1s 523 [NbConvertApp] Writing 87137 bytes to __notebook__.ipynb
+36596.4s 524 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+36597.9s 525 [NbConvertApp] Writing 495530 bytes to __results__.html
